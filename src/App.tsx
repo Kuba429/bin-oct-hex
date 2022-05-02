@@ -1,8 +1,8 @@
-import { useState } from "react";
 import FormatInput from "./components/FormatInput";
+import { useConvert } from "./hooks";
 
 function App() {
-    const [decimalState, setDecimalState] = useState(0);
+    const [decimalState, setDecimalState] = useConvert();
     return (
         <>
             <FormatInput
