@@ -13,13 +13,16 @@ export default function FormatInput({
     setDecimalState: useConvertSetter;
 }) {
     return (
-        <input
-            type="text"
-            placeholder={label}
-            value={decimalState.toString(base)}
-            onInput={(e: FormEvent<HTMLInputElement>) =>
-                setDecimalState(e, base)
-            }
-        />
+        <label>
+            {label.substring(0, 3) + ": "}
+            <input
+                type="text"
+                placeholder={label}
+                value={decimalState.toString(base)}
+                onInput={(e: FormEvent<HTMLInputElement>) =>
+                    setDecimalState(e, base)
+                }
+            />
+        </label>
     );
 }
